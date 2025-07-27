@@ -42,7 +42,14 @@ endforeach()
 
 # Build the library with C++11 standard support, independent from other including
 # software which may use a different CXX_STANDARD or CMAKE_CXX_STANDARD.
-set(CMAKE_CXX_STANDARD 11)
+
+# I just don't understand the whole logic here.
+# why do you guys who wrote code define a function using std::string_view
+# but set C++ standard 11 here??
+
+# I don't want to spend too many times on this
+# just simply change the number
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
